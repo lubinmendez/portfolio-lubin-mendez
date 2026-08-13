@@ -1,0 +1,37 @@
+:root {
+  /* typography: */
+  --font-family-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  --font-size-s: 0.875rem; /* 14px */
+  --font-size-m: 1rem;     /* 16px */
+  --font-size-l: 1.5rem;   /* 24px */
+  --font-size-xl: 3rem;    /* 48px */
+
+  /* Colors: */
+  --color-primary: #fff; /* 60% base background */
+  --color-secondary: #EAEAEA; /* 30% surface */
+  --color-tertiary: #00d180; /* 10% accent */
+  --color-tertiary-dark: #00B06B;
+  --color-tertiary-darker: #058d65;
+  --color-tertiary-light: #E5FAEF;
+
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f3f4f6;
+  --color-neutral-400: #8b8d98;
+  --color-neutral-600: #5f6470;
+  --color-neutral-900: #18181b;
+
+  --color-new-function: #AF94FF;
+  --color-error: #e5484d;
+  --color-success: #22a06b;
+
+  /* Layout */
+  --clickable-area-padding: 6px; /* Extra padding to improve click and tap targets */
+  --container-horizontal-padding: 5%; /* Left and right padding for shared components */
+
+  /* Shape */
+  --border-radius: 8px;
+}

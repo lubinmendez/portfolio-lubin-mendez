@@ -1,0 +1,70 @@
+/* Contact form — without media queries, responsive via width: min(100%, 600px); avoids layout jumps. */
+
+/* Uses .contact-form-container div container to center the form; remove wrapper (and its CSS) if you don't want centered layout. */
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(100%, 600px);
+  /* Responsive: Takes the smaller value (min) between its arguments, so it uses 100% of the available space while that is less than 600px; once it reaches 600px it stays there because that is the smaller argument */
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid var(--color-neutral-400);
+  border-radius: var(--border-radius);
+  outline: none; /* Remove browser's default outline to showcase custom border color on focus */
+  color: var(--color-neutral-900); /* typed text should be dark/black */
+}
+
+/* Transitions for smooth visual feedback on interactions: */
+.contact-form input,
+.contact-form textarea {
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-tertiary-dark);
+}
+
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+  color: var(--color-tertiary-dark);
+}
+
+/* Focus-visible */
+/* Override focus-visible base styles for this component.
+This stylesheet is loaded after base-styles so it can replace default keyboard navigation styles. */
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  border-color: var(--color-tertiary-dark);
+}
+
+/* Show error border only after the user has started typing (placeholder is not shown) and the input is invalid */
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+/* ================================== */
+/*======= SEND MESSAGE BUTTON ========*/
+/* ================================== */
+.contact-form-button-container {
+  display: flex;
+  justify-content: center;
+}

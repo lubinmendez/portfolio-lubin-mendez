@@ -1,0 +1,58 @@
+.typing-text {
+  border-right: 2px solid currentColor; /* CURSOR BLINK: 
+  Simulate a cursor (border in the right side) */
+   
+  animation: 
+  /* This shorthand syntax makes it easier to see which properties belong to each animation. */
+  /* Multiple animations must be declared in the same animation property. Separate animation declarations will override each other. */
+   
+    blink 1s step-end 0s 6 forwards, /* CURSOR BLINK  */
+    reveal 1.4s steps(20, end) 1s 1 forwards; /* HIDE-REVEAL TEXT  */  
+
+    /* animation-name / duration / timing-function / delay / iteration-count / fill-mode */
+
+/* CURSOR BLINK:
+   step-end → The change happens instantly at the end of each step instead of transitioning smoothly.
+   5 → The animation repeats 5 times.
+   forwards → Keeps the final state of the animation after it finishes (at the end it will disappear).
+*/
+
+/* HIDE-REVEAL TEXT:
+   1s → Waits 1 second before starting the animation.
+   1 → Runs only once.
+   forwards → Keeps the final width after the animation finishes.
+*/
+
+  /* === HIDE-REVEAL TEXT: === */
+
+  /* We need to hide the text initially with width 0, and then reveal it with the animation. */
+
+  display: inline-block; /* In order to be able to apply width */
+  width: 0; /* width: 0 + overflow: hidden = the text is hidden */
+  overflow: hidden; /* cuts what is outside the element's box (the text that is not revealed yet) */
+  white-space: nowrap; /* avoid line breaks in the text (the text will be revealed in one line) */
+}
+
+
+@keyframes blink {
+  0% {
+    border-color: currentColor;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes reveal {
+  0% { 
+    width: 0; 
+  }
+  100% { 
+    width: 17ch; 
+  }
+}

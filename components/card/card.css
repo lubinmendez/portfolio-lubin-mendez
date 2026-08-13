@@ -1,0 +1,69 @@
+/* Component variables */
+
+
+/* Rest of styles for the component */
+.card-container {
+  width: 100%; /* Make the card take the full width of its container */
+  display: flex;
+  flex-direction: column;
+  width: 350px; /* Fixed width for practice, remove later */
+}
+
+.card-image {
+  width: 100%; /* Make the image take the full width of the card */ 
+  height: auto; /* Maintain aspect ratio */
+  border-radius: var(--border-radius);
+  transition: filter 0.25s ease;
+}
+
+.card-image:hover {
+  filter: brightness(1.1) saturate(1.1);
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  color: var(--color-neutral-900);
+  padding-top: 15px;
+  padding-bottom: 3px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--clickable-area-padding); /* Increase clicka  le area for better UX */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+}
+
+.card-links a, 
+.card-image-link {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+}
+
+.card-link-icon {
+  width: 30px;
+  height: 30px;
+  fill: var(--color-neutral-900);
+  transition: fill 0.2s ease;
+}
+
+/* Override default base styles for keyborad navigattion only fot this links */
+.card-links a:focus-visible {
+  outline-offset: 0;
+}
+
+/* Restrict hover to devices with hover capability and fine pointer */
+@media (hover: hover) and (pointer: fine) {
+  .card-links a:hover .card-link-icon {
+    fill: var(--color-tertiary);
+  }
+}

@@ -1,0 +1,7 @@
+.section-title {
+  border-bottom: 3px solid var(--color-tertiary);
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  width: fit-content;
+  margin: 0 auto 2.5rem;
+}

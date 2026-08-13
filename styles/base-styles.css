@@ -1,0 +1,54 @@
+/* Reset default browser styles: */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* Base for rem scaling: */
+}
+
+/* Base typography for entire component: */
+body {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-m);
+  color: var(--color-neutral-900);
+  background-color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-neutral-900);
+}
+
+/* keeps visited links visually consistent with design system: */
+a:visited {
+  color: var(--color-neutral-900);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Default customized visual selection box for Tab navigation for all focusable interactive elements. If you whant to override base focus-visible styles for a component. Make sure the component's stylesheet is loaded after base-styles so it can replace default keyboard navigation styles. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Padding for the main content of the page (obviously does not include menu and footer) */
+.page-content {
+  padding-inline: var(--container-horizontal-padding);
+}
+
+/* Cover the viewport height minus the height of the navbar. This is useful for sections that need to fill the entire viewport height, but not overlap with the navbar. */
+.viewport-container {
+	min-height: calc(100vh - var(--navbar-height));
+}

@@ -1,0 +1,40 @@
+/* Place this button inside a container.
+   So the container controls its alignment. */
+
+.button {
+  width: fit-content;
+  padding: 0.9rem 3rem;
+  background-color: var(--color-tertiary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-m);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+}
+
+.button,
+.button:visited {
+  color: var(--color-neutral-100);
+}
+
+.button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover */ 
+@media (hover: hover) and (pointer: fine) { /*Restrict hover to devices with hover capability and fine pointer */
+  .button:hover {
+    background-color: var(--color-tertiary-dark);
+  }
+}
+
+.button:focus-visible {
+  outline: none;
+  background-color: var(--color-tertiary-dark);
+}
+
+/* Active*/
+.button:active {
+  transform: scale(0.98);
+}
