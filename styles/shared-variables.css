@@ -4,11 +4,12 @@
 
   --font-weight-regular: 400;
   --font-weight-bold: 600;
+  --font-weight-extra-bold: 700;
 
   --font-size-s: 0.875rem; /* 14px */
   --font-size-m: 1rem;     /* 16px */
   --font-size-l: 1.5rem;   /* 24px */
-  --font-size-xl: 3rem;    /* 48px */
+  --font-size-xl: 2rem;    /* 32px */
 
   /* Colors: */
   --color-primary: #fff; /* 60% base background */

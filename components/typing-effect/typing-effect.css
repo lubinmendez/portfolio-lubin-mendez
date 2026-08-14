@@ -1,4 +1,8 @@
 .typing-text {
+  /* Inherit font size and weight from the parent element */
+  font-size: inherit;
+  font-weight: inherit;
+
   border-right: 2px solid currentColor; /* CURSOR BLINK: 
   Simulate a cursor (border in the right side) */
    

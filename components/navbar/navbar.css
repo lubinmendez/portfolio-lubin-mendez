@@ -18,6 +18,24 @@ body {
   padding-top: var(--navbar-height); /* Prevents content from being hidden behind the fixed navbar */
 }
 
+/* LOGO/NAME LINK Gradient */
+.gradient-text {
+  background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+
+  /* Limits the gradient background to the shape of the text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Makes the original text color transparent so the gradient is visible */
+  background-clip: text;
+  color: transparent;
+}
+
+.logo-name-link {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-extra-bold);
+}
+
 .menu-hamburger-button svg {
   width: 24px;
   height: 24px;
