@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.home-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extra-bold);
+}
+
 /*======= Layout mobile first ========*/
 .home-container {
   gap: 3vh;
