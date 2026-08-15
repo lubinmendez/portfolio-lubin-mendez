@@ -4,7 +4,7 @@
 .button {
   width: fit-content;
   padding: 0.9rem 3rem;
-  background-color: var(--color-tertiary);
+  background-image: var(--gradient-primary);
   border: none;
   border-radius: var(--border-radius);
   font-size: var(--font-size-m);
@@ -25,7 +25,7 @@
 /* Hover */ 
 @media (hover: hover) and (pointer: fine) { /*Restrict hover to devices with hover capability and fine pointer */
   .button:hover {
-    background-color: var(--color-tertiary-dark);
+    background-image: var(--gradient-inverted);
   }
 }
 

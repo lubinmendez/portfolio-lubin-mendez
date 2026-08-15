@@ -20,7 +20,7 @@ body {
 
 /* LOGO/NAME LINK Gradient */
 .gradient-text {
-  background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  background-image: var(--gradient-primary);
 
   /* Limits the gradient background to the shape of the text */
   -webkit-background-clip: text;

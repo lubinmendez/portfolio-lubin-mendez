@@ -29,6 +29,11 @@
   --color-error: #e5484d;
   --color-success: #22a06b;
 
+  /* Gradient colors */
+  --gradient-primary: linear-gradient(135deg, #00c6ff, #0072ff);
+  --gradient-inverted: linear-gradient(135deg, #0072ff, #00c6ff);
+
+
   /* Layout */
   --clickable-area-padding: 6px; /* Extra padding to improve click and tap targets */
   --container-horizontal-padding: 5%; /* Left and right padding for shared components */
