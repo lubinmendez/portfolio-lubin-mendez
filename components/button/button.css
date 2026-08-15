@@ -11,6 +11,8 @@
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 6px 14px rgba(0, 114, 255, 0.16);
 }
 
 .button,
@@ -19,13 +21,15 @@
 }
 
 .button {
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover */ 
 @media (hover: hover) and (pointer: fine) { /*Restrict hover to devices with hover capability and fine pointer */
   .button:hover {
     background-image: var(--gradient-inverted);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 8px 18px rgba(0, 114, 255, 0.2);
   }
 }
 
@@ -36,5 +40,6 @@
 
 /* Active*/
 .button:active {
-  transform: scale(0.98);
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 4px 10px rgba(0, 114, 255, 0.14);
 }
