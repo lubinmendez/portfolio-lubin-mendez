@@ -11,7 +11,7 @@
   /* Multiple animations must be declared in the same animation property. Separate animation declarations will override each other. */
    
     blink 1s step-end 0s 6 forwards, /* CURSOR BLINK  */
-    reveal 1.4s steps(20, end) 1s 1 forwards; /* HIDE-REVEAL TEXT  */  
+    reveal 1.4s steps(17, end) 1s 1 forwards; /* HIDE-REVEAL TEXT  */  
 
     /* animation-name / duration / timing-function / delay / iteration-count / fill-mode */
 
@@ -57,6 +57,6 @@
     width: 0; 
   }
   100% { 
-    width: 17ch; 
+    width: 15.2ch; 
   }
 }
